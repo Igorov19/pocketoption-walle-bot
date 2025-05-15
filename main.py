@@ -9,7 +9,7 @@ load_dotenv()
 bot = Bot(token=os.getenv("TOKEN"))
 dp = Dispatcher(bot)
 
-# Кнопки
+# Клавіатура
 keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 keyboard.add(KeyboardButton("Купити"), KeyboardButton("Продати"))
 
