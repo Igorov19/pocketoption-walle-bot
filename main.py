@@ -11,7 +11,7 @@ dp = Dispatcher(bot)
 
 # Клавіатура
 keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
-keyboard.add(KeyboardButton("Купити"), KeyboardButton("Продати"))
+keyboard.add(KeyboardButton("Купити"), KeyboardButton("Продавати"))
 
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
@@ -21,9 +21,9 @@ async def start(message: types.Message):
 async def buy(message: types.Message):
     await message.answer("Ти натиснув: Купити")
 
-@dp.message_handler(lambda message: message.text == "Продати")
+@dp.message_handler(lambda message: message.text == "Продавати")
 async def sell(message: types.Message):
-    await message.answer("Ти натиснув: Продати")
+    await message.answer("Ти натиснув: Продавати")
 
 if __name__ == "__main__":
     executor.start_polling(dp)
